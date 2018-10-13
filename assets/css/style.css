@@ -1,0 +1,247 @@
+/* 
+---------------------
+LINK TO CUSTOM 80'S LED FONT
+---------------------
+*/
+@font-face {
+    font-family: LCD14;
+	src: url(fonts/LCD14.otf);
+}
+
+/* 
+---------------------
+PAGE-WIDE STYLES
+---------------------
+*/
+/* Set background to a pale snowy grey. */
+body {
+	background-color: #EAEAEA;
+}
+
+h2 {
+	font-size: 1.3em;
+	color: #333
+}
+
+/* 
+---------------------
+HEADER LAYOUT - JUMBOTRON
+---------------------
+*/
+.jumbotron {
+    background-image: url('../images/trooper_bg.png');
+    background-repeat: no-repeat;
+	background-size: cover;
+	height: 600px;
+	padding-top: 50px;
+	border-radius: 0 0 15px 15px;
+}
+
+/* 
+---------------------
+GAME UI - SPECIFIC ZONES 
+---------------------
+*/
+/* The area where players select thier ship - Aircraft hanger metaphor. */
+#selectShip {
+	width: 100%;
+	padding: 10px;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+/* Additional styling for the hangar area. */
+.greyBg {
+	background: #333;
+	background-image: url('../images/hex_bg1.jpg');
+	background-size: 900px;
+	border-radius: 15px;
+}
+
+/* The arena where the selected fighters are displayed after selection. */
+#fighters {
+	border: 0px solid r#333;
+	border-radius: 0 10px 0 0;
+	background-image: url("../images/hoth4.png");
+	background-size: 900px;
+	height: 100%;
+}
+
+/* Styling for the target reticle - I found that it looked cool but wasn't right conceptualy, hence commented out.
+.target {
+	margin-top: 180px;
+	margin-left: 230px;
+	position: absolute;
+} */
+
+/* Area under the hanger and arena where instructions and feedback are dynamically displayed. */
+#menu {
+	/* background: rgba(0, 0, 0, 0.502); */
+	border-radius: 0 0 15px 15px;
+	padding: 0;
+	margin: 0;
+	
+}
+
+/* Additional styling for the selectShip and fighters areas (Particularly scaling and border design.) */
+.gameStage {
+	height: 500px;
+	margin-bottom: 20px;
+	border: 5px solid #333;
+	border-bottom: 5px solid #999;
+	border-radius: 15px 15px 0 0;
+}
+
+/* 
+---------------------
+GAME UI - TEXT NON-DYNAMIC
+---------------------
+*/
+/* Lists the stats for the various ships. */
+.shipStats {
+	font-family: LCD14;
+	color: rgb(0, 229, 245);
+	text-align: center;
+}
+/* Green LED glowing text effect. */
+.rebelGreen {
+	color: rgb(171, 255, 36);
+	text-shadow: 0 0 5px rgb(221, 255, 0);
+}
+
+/* Red LED glowing text effect. */
+.imperialRed {
+	color: rgb(255, 33, 33);
+	text-shadow: 0 0 5px rgba(255, 0, 119, 0.735);
+}
+
+/* 
+---------------------
+GAME UI - TEXT DYNAMIC
+---------------------
+*/
+/* The user feedback and instructions with 80's computer typing metaphor animation. */
+#info {
+	height: 130px;
+	font-family: LCD14;
+	text-align: center;
+	color: rgb(0, 229, 245);
+	text-shadow: 0 0 5px rgb(0, 255, 200);
+	padding: 20px 30px;
+	font-size: 24px;
+	line-height: 1.2em; 
+}
+
+/* All of this is for the "typewriter" animation. */
+.typewriter {
+	padding-top: 10px;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid rgb(0, 229, 245); /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+	animation: 
+	  typing 3.5s steps(40, end),
+	  blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: rgb(0, 229, 245);
+	}
+  }
+
+/* 
+---------------------
+NAVIGATION & ANIMATION
+---------------------
+*/
+/* Handling the Attack Button that appears after the flighters have been selected. */
+#attackButton {
+	width: 150px;
+	padding: 5px;
+	font-size: .75em;
+	margin: 20px auto  0 auto;
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 33, 33);
+	text-shadow: none;
+	border: 3px dashed rgb(211, 197, 0);
+	border-radius: 5px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	cursor: pointer;
+}
+
+#attackButton:hover {
+	border: 3px dashed rgb(177, 1, 1);
+}
+
+/* Styling for the starship sprites. */
+.sprite {
+	width: 200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Makes the sprites bounce on mouse over. */
+.sprite:hover {
+	animation: hop 0.4s infinite;
+}
+
+ /* This is the bouncing animation.  */
+ @keyframes hop {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px) scale(1.05);
+	}
+	100% {
+		transform: translateY(0px) scale(1);
+	}
+}
+
+/* 
+---------------------
+FOOTER
+---------------------
+*/
+/* Footer block finishes the page design and houses the credit. */
+#footer {
+	font-size: .75em;
+	height: 50px;
+	background-color: rgb(220, 220, 220);
+	border-radius: 15px 15px 0 0;
+	color: #999;
+	margin-top: 30px;
+	padding: 10px 0 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
