@@ -7,7 +7,8 @@
 **Play the game here:**
 [Star Wars RPG - Hoth Game](https://bradbones.github.io/unit_4_game/index.html)
 
-##TA's - If you want to force a win for testing purposes, choose a bomber, to force a loose, attack both bombers with a fighter.
+## Note to TA's...
+If you want to force a win for testing purposes, choose a bomber, to force a loose, attack both bombers with a fighter.
 
 
 ### **Week 4 jQuery Homework**
